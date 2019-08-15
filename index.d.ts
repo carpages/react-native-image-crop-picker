@@ -28,6 +28,7 @@ declare module "react-native-image-crop-picker" {
         mediaType?: string;
         showsSelectedCount?: boolean;
         forceJpg?: boolean;
+        sortOrder?: 'none' | 'asc' | 'desc';
         showCropGuidelines?: boolean;
         hideBottomControls?: boolean;
         enableRotationGesture?: boolean;
@@ -43,7 +44,11 @@ declare module "react-native-image-crop-picker" {
         height: number;
         mime: string;
         exif: null | object;
-        cropRect: null | CropRect
+        cropRect: null | CropRect;
+        filename: string;
+        creationDate: string;
+        modificationDate?: string;
+
     }
 
     export interface CropRect {
